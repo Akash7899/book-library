@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Login from "./Login";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
@@ -91,7 +92,7 @@ function Navbar() {
             <label className="flex items-center gap-2 px-2 py-2 border rounded-md">
               <input
                 type="text"
-                className="grow outline-none"
+                className="grow outline-none dark:bg-slate-900 dark-text-white"
                 placeholder="Search"
               />
               <svg
@@ -139,9 +140,13 @@ function Navbar() {
             </label>
           </div>
           <div className="">
-            <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate:800 duration-300 cursor-pointer">
+            <a
+              className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate:800 duration-300 cursor-pointer"
+              onClick={() => document.getElementById("my_modal_3").showModal()}
+            >
               Login
             </a>
+            <Login />
           </div>
         </div>
       </div>
